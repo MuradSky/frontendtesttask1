@@ -1,0 +1,47 @@
+.contactUs{
+	width: 100%;
+	max-width: 730px;
+	display: flex;
+	justify-content: space-between;
+
+	margin-bottom: 40px;
+	&__item .logo{
+		background: url(../img/footer/footerlogo.svg) no-repeat;
+		width: 48px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+
+		margin-bottom: 33px;
+	}
+	&__item .logo span{
+		font-family: $gilroyReg;
+		font-size: 28px;
+		margin-left: 60px;
+		color: $white;
+	}
+	&__item:last-child{
+		@media (max-width: 650px) {
+			display: none;
+		}
+
+	}
+	&__item:nth-child(2){
+		@media (max-width: 450px) {
+			display: none;
+		}
+	}
+	@media (max-width: 800px) {
+		width: 90%;
+	}
+	@media (max-width: 700px) {
+		padding-top: 50px;
+	}
+	@media (max-width: 650px) {
+		justify-content: space-around;
+	}
+	@media (max-width: 440px) {
+		padding-top: 100px;
+		margin-left: 20px;
+	}
+}

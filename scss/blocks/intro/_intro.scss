@@ -1,0 +1,178 @@
+.intro{
+    position: relative;
+    background: $introGrad;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 150px;
+    &__inner{
+        display: flex;
+    }
+    &__btn{
+        font-size: 16px;
+        font-family: $gilroyReg;
+        letter-spacing: 0.04em;
+        padding: 17px 40px;
+
+        border: 1px solid transparent;
+        background: $blue_04;
+        box-shadow: $boxShadow;
+        border-radius: 10px;
+        color: $white;
+
+        transition: $buttonTransi;
+        &:hover{
+            color: $blue_04;
+            background: $white;
+            border: 1px solid $blue_04;
+        }
+        &:active{
+            color: $white;
+            border: 1px solid transparent;
+            background: $blue_04;
+        }
+    }
+    @media (max-width: 1120px) {
+        padding-top: 0;
+    }
+
+}
+
+
+
+.content{
+    width: 100%;
+    max-width: 547px;
+    &__title{
+        font-size: 64px;
+        font-family: $introFfam;
+        color: $blue_01;
+        margin-bottom: 30px;
+        @media (max-width: 610px){
+            font-size: 54px;
+        }
+        @media (max-width: 522px) {
+            font-size: 48px;
+        }
+        @media (max-width: 479px) {
+            font-size: 40px;
+            margin-bottom: 100px;
+        }
+        @media (max-width: 400px){
+            font-size: 35px;
+        }
+        @media (max-width: 360px){
+            font-size: 30px;
+        }
+        @media (max-height: 470px){
+            font-size: 35px;
+            margin-bottom: 50px;
+        }
+    }
+    &__text{
+        width: 100%;
+        max-width: 425px;
+        font-family: $gilroyReg;
+        font-size: 16px;
+        line-height: 1.7;
+        letter-spacing: $letterSpace;
+        color: $blue_01;
+        opacity: 0.6;
+        margin-bottom: 80px;
+        @media (max-width: 610px){
+            margin: 0 auto 80px;
+            opacity: .8;
+        }
+        @media (max-width: 522px) {
+            font-size: 14px;
+            opacity: 1;
+        }
+        @media (max-width: 479px) {
+            display: none;
+        }
+        @media (max-height: 470px){
+            display: none;
+        }
+    }
+
+    @media (max-width: 1150px){
+        position: sticky;
+        z-index: 30;
+    }
+    @media (max-width: 610px){
+        text-align: center;
+    }
+
+     @media (max-height: 470px){
+        max-width: 300px;
+     }
+}
+
+.intro__illustration{  
+    width: 100%;
+    max-width: 688px;
+
+    @media (max-width: 1120px){
+        position: absolute;
+        top: 15%;
+        right: 0;
+        max-width: 500px;
+    }
+}
+#intro__illustration{
+    position: sticky;
+
+    z-index: 30;
+    max-width: 100%;
+    width: 687.25px;
+    height: 612.56px;
+    @media (max-width: 1250px) {
+        width: 547.25px;
+        height: 512.56px;
+    }
+    @media (max-width: 1150px){
+        z-index: 1;
+        opacity: .8;
+    }
+    @media (max-width: 1080px){
+        opacity: .6;
+    }
+    @media (max-width: 991px){
+        opacity: .3;
+    }
+    @media (max-width: 771px){
+        width: 487.25px;
+        height: 412.56px;
+    }
+    @media (max-width: 610px){
+        opacity: .1;
+    }
+     @media (max-width: 479px) {
+        top: 25%;
+        width: 447.25px;
+        height: 412.56px;
+        opacity: .5;
+     }
+    @media (max-width: 400px){
+        top: 30%;
+        width: 387.25px;
+        height: 342.56px;
+        opacity: .3;
+    } 
+    @media (max-width: 370px){
+        right: 6%;
+        width: 327.25px;
+        height: 302.56px;
+        opacity: .3;
+    }
+    @media (max-width: 350px){
+        width: 307.25px;
+        right: 3%;
+    }
+
+    @media (max-height: 470px){
+        width: 387.25px;
+        height: 312.56px;
+    }
+}

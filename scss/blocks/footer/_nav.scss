@@ -1,0 +1,44 @@
+.nav{
+	display: flex;
+	flex-flow: column;
+	&__title{
+		font-family: $gilroyReg;
+		font-size: 20px;
+		line-height: 1.5;
+		letter-spacing: $letterSpace;
+		color: $white;
+
+		margin-bottom: 32px;
+	}
+	&__link{
+		position: relative;
+
+		font-size: 16px;
+		line-height: 1.7;
+
+		letter-spacing: $letterSpace;
+		color: $white;
+
+		margin-bottom: 16px;
+
+		opacity: .8;
+		&:hover{
+			opacity: 1;
+		}
+		&::after{
+			content: "";
+			display: block;
+			width: 0;
+			height: 2px;
+			background: $white;
+			transition: all .2s linear;
+		}
+		&:hover::after{
+			width: 100%;
+		}
+		@media (max-width: 800px) {
+			font-size: 13px	
+		}
+	}
+
+}

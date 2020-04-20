@@ -1,0 +1,53 @@
+.mask{
+	padding: 150px 0;
+	&__inner{
+		background: url(../img/contactUs/mask.svg) no-repeat center;
+		width: 100%;
+		height: 250px;
+		text-align: center;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-content: center;
+		@media  (max-width: 370px) {
+			height: 150px;
+		}
+	}
+	&__title{
+		font-family: $gilroyReg;
+		font-size: 44px;
+		line-height: 1.5;
+		letter-spacing: $letSpMedium;
+		color: $white;
+		margin-bottom: 16px;
+
+	}
+	&__text{
+		font-size: 20px;
+		line-height: 1.5;
+		
+		
+		letter-spacing: $letSpMedium;
+		color: $white;
+		width: 100%;
+		max-width: 780px;
+
+		margin: 0 auto ;
+
+		@media (max-width: 500px) {
+			font-size: 14px;
+		}
+		@media (max-width: 370px) {
+			display: none;
+		}
+
+	}
+	@media  (max-width: 370px) {
+		padding: 100px 0;
+	}
+	@media  (max-height: 400px) {
+		padding: 100px 0;
+	}
+
+
+}

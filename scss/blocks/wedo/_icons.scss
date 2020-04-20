@@ -1,0 +1,97 @@
+
+.icons{
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	right: 0;
+	z-index: 1;
+	height: 200px;
+	width: 250px;
+	&__wrap{
+		position: relative;
+		display: flex;
+
+	}
+	&__link{
+		transition: transform .1s linear;
+		&:hover{
+			transform: scale(1.2);
+		}
+		&:active{
+			transform: scale(1);
+		}
+	}
+	&__box1{
+		position: absolute;
+		top: 40px;
+		left: -12px;
+		transition: transform .1s linear .1s;
+		transform: scale(0) translate3d(120px,0,0);
+	}
+	&__box2{
+		position: absolute;
+		top: -70px;
+		left: 30px;
+		transition: transform .1s linear .2s;
+		transform: scale(0) translate3d(60px,70px,0);
+	}
+	&__box3{
+		position: absolute;
+		top: -70px;
+		left: 125px;
+		transition: transform .1s linear .3s;
+		transform: scale(0) translate3d(-30px,70px,0);
+	}
+	&__box4{
+		position: absolute;
+		top: 40px;
+		left: 172px;
+		transition: transform .1s linear .4s;
+		transform: scale(0) translate3d(-80px,0,0);
+	}
+	&:hover .icons--box{
+		transform: scale(1) translate3d(0,0,0);
+	}
+	@media (max-width: 825px) {
+		left: 16%;
+	}
+	@media (max-width: 771px){
+		left: 13%;
+	}
+	@media (max-width: 700px){
+		left: 20%;
+	}
+	@media (max-width: 400px){
+		left: 16%;
+	}
+}
+
+
+#icons__lock{
+	background: url(../img/whatWedo/lock.svg) no-repeat;
+	width: 72px;
+	height: 71px;
+	display: block;
+}
+#icons__snow{
+	background: url(../img/whatWedo/snow.svg) no-repeat;
+	width: 72px;
+	height: 71px;
+	display: block;
+}
+
+#icons__cam{
+	background: url(../img/whatWedo/cam.svg) no-repeat;
+	width: 72px;
+	height: 71px;
+	display: block;
+
+}
+#icons__lamp{
+	background: url(../img/whatWedo/lamp.svg) no-repeat;
+	width: 72px;
+	height: 71px;
+	display: block;
+
+}
+

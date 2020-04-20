@@ -1,0 +1,269 @@
+.form{
+	padding: 56px;
+	background: $white;
+	box-shadow: $boxShadow2;
+	border-radius: 10px;
+	margin-bottom: 100px;
+	position: sticky;
+	z-index: 1;
+	transition: transform .3s linear;
+	&__title{
+		font-family: $gilroySemi;
+		font-size: 20px;
+		line-height: 1.5;
+		letter-spacing: $letSpMedium;
+		margin-bottom: 48px;
+		color: $blue_01;
+
+	}
+	&__label{
+		display: block;
+		font-family: $gilroyReg;
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: $letSpMedium;
+
+		margin-bottom: 10px;
+		color: $blue_01;
+		opacity: 0.8;
+	}
+
+	&__input{
+		font-family: $gilroyReg;
+		font-size: 20px;
+		line-height: 1.5;
+
+
+		letter-spacing: $letSpMedium;
+
+		color: $blue_01;
+		opacity: 0.8;
+		width: 100%;
+		height: 72px;
+		margin-bottom: 32px;
+		
+		padding: 20px;
+		border: 1px solid $inputBord;
+		border-radius: 10px;
+		&[placeholder]{
+			// padding-top: 21px;
+		}
+		&::placeholder{
+			font-size: 16px;
+
+			letter-spacing: $letSpMedium;
+			color: $blue_01;
+			opacity: 0.4;
+		}
+		&:focus{
+			border: 1px solid $blue_04;
+		}
+		&:focus::placeholder{
+			color: transparent;
+		}
+		@media (max-width: 560px) {
+			
+			height: 65px;
+		}
+		@media (max-width: 400px) {
+		
+			height: 50px;
+		}
+
+	}
+	&__input.error{
+		border-color: #e30000;
+	}
+	&__message{
+		font-family: $gilroyReg;
+		font-size: 20px;
+		width: 100%;
+		height: 144px;
+		opacity: 0.8;
+
+		border: 1px solid $inputBord;
+		border-radius: 10px;
+		resize: none;
+		padding: 20px;
+		margin-bottom: 70px;
+		&::placeholder{
+			font-family: $gilroyReg;
+		
+			font-size: 16px;
+			line-height: 1.5;
+
+			letter-spacing: $letSpMedium;
+			color: $blue_01;
+			opacity: 0.4;
+		}
+		&:focus{
+			border: 1px solid $blue_04;
+		}
+		&:focus::placeholder{
+			color: transparent;
+		}	
+	}
+	&__message.error{
+		border-color: #e30000;
+	}
+
+	&__submit{
+		display: block;
+		font-family: $gilroyReg;
+		font-size: 16px;
+		text-align: center;
+		letter-spacing: $letSpMedium;
+		width: 428px;
+		height: 70px;
+		border-radius: 10px;
+		border: 1px solid transparent;
+		background: $blue_04;
+		
+		margin: 0 auto;
+		box-shadow: $boxShadow2;
+
+		color: $white;
+		cursor: pointer;
+		&:hover{
+		    color: $blue_04;
+		    background: $white;
+		    border: 1px solid $blue_04;
+		}
+		&:active{
+		    color: $white;
+		    border: 1px solid transparent;
+		    background: $blue_04;
+		}
+		@media (max-width: 560px) {
+			width: 380px;
+		}
+		@media (max-width: 450px) {
+			width: 340px;
+		}
+		@media (max-width: 400px) {
+			width: 300px;
+			height: 50px;
+		}
+		@media (max-width: 360px) {
+			width: 250px;	
+		}
+	}
+	@media (max-width: 560px) {
+		padding: 56px 30px;
+	}
+	@media (max-width: 450px) {
+		padding: 56px 20px;
+	}
+
+}
+.input__wrap{
+	position: relative;
+}
+
+.error__form{
+	position: absolute;
+	display: block;
+	top: 10%;
+	right: 5%;
+	
+	color: #e30000;
+	font-size: 13px;
+	font-family: $gilroyReg;
+}
+
+.error--message{
+	top: 5%;
+}
+.form.form--hide{
+	transform: translateY(300%);
+	
+}
+.popap__ajax{
+	position: fixed;
+	transform: translateX(-300%);
+	top: 10%;
+	width: 100%;
+	height: 250px;
+	border-radius: 10px;
+	background: $white;
+	z-index: 2;
+	margin: 0 auto;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform .3s linear;
+	opacity: 0;
+	@media (max-width:420px ){
+		height: 180px;
+
+	}
+}
+.popap__btn{
+	position: absolute;
+	top: 10%;
+	right: 5%;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	transition: transform .2s linear;
+}
+.popap__btn::before{
+	content:"";
+	
+	position: absolute;
+	width: 20px;
+	height: 3px;
+	background: $blue_03;
+	display: block;
+	transform: rotate(-45deg);
+	border-radius: 5px;
+}
+.popap__btn::after{
+	content:"";
+
+	position: absolute;
+	width: 20px;
+	height: 3px;
+	background: $blue_03;
+	display: block;
+	transform: rotate(45deg);
+	border-radius: 5px;
+}
+.popap__btn:hover::before,
+.popap__btn:hover::after{ 
+	background: $blue_04;
+}
+.popap__btn:hover{
+	transform: scale(1.1);
+}
+.popap__btn:active{
+	transform: scale(1);
+}
+
+.popap__text{
+	text-transform: uppercase;
+	
+	color: $blue_03;
+	font-size: 30px;
+	line-height: 1.4;
+	margin-left: 120px;
+	padding: 0 30px;
+	@media (max-width:420px ){
+		font-size: 16px;
+		margin-left: 80px;
+	}
+
+}
+.popap__icon{
+	position: absolute;
+	left: 5%;
+	display: block;
+	width: 100px;
+	height: 100px;
+	transform: scale(0);
+	@media (max-width:420px ){
+		width: 70px;
+		height: 70px;
+	}
+}
+

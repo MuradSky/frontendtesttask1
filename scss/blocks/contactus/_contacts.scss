@@ -1,0 +1,156 @@
+.contactsWrap{
+	position: relative;
+}
+.contactsWrap .footer{
+	bottom: -50%;
+}
+
+.contacts{
+	display: flex;
+	justify-content: space-around;
+	&__inner{
+		position: relative;
+		margin-left: 100px;
+		@media (max-width: 1100px) {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 50px;
+		}
+		@media (max-width: 910px) {
+			margin-left: 0;
+
+		}
+		@media (max-width: 745px) {
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 100%;
+
+			max-width: 400px;
+		}
+		@media (max-width: 500px) {
+			max-width: 260px;
+		}
+		@media (max-width: 450px) {
+			max-width: none;
+		}
+	}
+	&__img{
+		display: block;
+		background: url(../img/contactUs/contactUs.svg);
+		width: 301px;
+		height: 181px;
+
+		margin-bottom: 71px;
+		@media (max-width: 1100px) {
+			position: absolute;
+			top: -20%;
+			left: 10%;
+			right: 0;
+			opacity: .5;
+		}
+		@media (max-width: 370px) {
+			left: -8%;
+		}
+	}
+	&__item{
+		width: 100%;
+		max-width: 280px;
+		@media (max-width: 1100px) {
+			margin: 0 20px;
+		}
+	}
+	&__item--title{
+		font-family: $gilroySemi;
+		font-size: 20px;
+		line-height: 1.5;
+		letter-spacing: $letSpMedium;
+		color: $blue_01;
+
+		margin-bottom: 24px;
+
+	}
+
+	&__item--text{
+		font-family: $gilroyReg;
+		font-size: 16px;
+		line-height: 1.7;
+
+		letter-spacing: $letSpMedium;
+		opacity: 0.6;
+		color: $blue_01;
+
+		margin-bottom: 40px;
+		
+		@media (max-width: 910px) {
+			font-size: 14px;
+		}
+
+	}
+
+	&__link{
+		position: relative;
+		display: inline-block;
+		font-family: $gilroyReg;
+		font-size: 16px;
+		letter-spacing: $letSpMedium;
+		opacity: 0.6;
+		color: $blue_01;
+		margin-left: 30px;
+		margin-bottom: 20px;
+		&:hover{
+			text-decoration: underline;
+		}
+		&::before{
+			position: absolute;
+			top: 0;
+			left: -40px;
+			content: "";
+			display: inline-block;
+			background: url(../img/contactUs/telicon.svg);
+			width: 18px;
+			height: 18px;
+		}
+	}
+	@media (max-width: 1100px) {
+		flex-direction: column;
+		align-items: center;
+	}
+	@media (max-width: 910px) {
+		font-size: 14px;
+	}
+
+}
+
+.glob__icon::before{
+	position: absolute;
+	top: 0;
+	left: -40px;
+	content: "";
+	display: inline-block;
+	background: url(../img/contactUs/glob.svg);
+	width: 20px;
+	height: 20px;
+}
+.mgs__icon::before{
+	position: absolute;
+	top: 0;
+	left: -40px;
+	content: "";
+	display: inline-block;
+	background: url(../img/contactUs/msg.svg);
+	width: 20px;
+	height: 16px;
+}
+
+
+
+
+
+// Yandex Map Parametres
+#map{
+	width: 100%;
+	height: 500px;
+	@media (max-width: 550px) {
+		display: none;
+	}
+}
